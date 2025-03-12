@@ -1,0 +1,27 @@
+name: Java Project Workflow  
+
+on: push  
+
+jobs:
+  job1:
+    name: Linux Job  
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Checkout repository  
+        uses: actions/checkout@v4  
+        
+      - name: List all files  
+        run: ls -la  
+        
+      - name: Print working directory  
+        run: pwd  
+
+  job2:
+    name: Windows Job  
+    runs-on: windows-latest  
+    steps:
+      - name: Checkout repository  
+        uses: actions/checkout@v4  
+        
+      - name: Print working directory  
+        run: pwd  
